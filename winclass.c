@@ -1,6 +1,7 @@
 #include <windows.h>
+// -lgdi32 required
 
-WNDCLASSEX* bakery_window_class(WNDCLASSEX* wc, LPCSTR class_name, CALLBACK window_proc)
+WNDCLASSEX* bakery_window_class(WNDCLASSEX* wc, LPCSTR class_name, WNDPROC window_proc)
 {
 	wc->cbSize        = sizeof(wc);
 	wc->style         = CS_HREDRAW | CS_VREDRAW;
